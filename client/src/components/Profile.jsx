@@ -40,7 +40,7 @@ function Profile({ match }) {
     if (!profile) {
       getProfile();
     }
-  }, [dispatch, profile, setIsLoading, match]);
+  }, [dispatch, profile, setIsLoading, match.params.id]);
 
   useEffect(() => {
     if (profile && profile.githubusername) {
