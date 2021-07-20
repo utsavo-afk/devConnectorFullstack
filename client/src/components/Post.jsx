@@ -2,11 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { notifyAndClear } from "../reducers/alertReducer";
 import { checkCacheAndSetAuth } from "../reducers/authReducer";
-import {
-  addCommentToPost,
-  getPost,
-  resetSinglePost,
-} from "../reducers/postReducer";
+import { addCommentToPost, getPost } from "../reducers/postReducer";
 import {
   Image,
   Button,
@@ -38,7 +34,6 @@ function Post({ match }) {
   }, [dispatch, isAuthenticated]);
 
   useEffect(() => {
-    dispatch(resetSinglePost());
     async function getSinglePost() {
       try {
         await dispatch(getPost(match.params.id));
@@ -46,10 +41,8 @@ function Post({ match }) {
         dispatch(notifyAndClear("" + error, "danger", 3));
       }
     }
-    if (!post) {
-      getSinglePost();
-    }
-  }, [dispatch, post, match.params.id]);
+    getSinglePost();
+  }, [dispatch, match.params.id]);
 
   const reset = "reset";
   const { [reset]: resetComment, ...comment } = useField("text");
