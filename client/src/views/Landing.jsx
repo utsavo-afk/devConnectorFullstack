@@ -37,7 +37,7 @@ const Landing = () => {
           repository to make custom changes and add functionality. If you are
           interested, go{" "}
           <a
-            href="https://github.com/webzth/devConector"
+            href="https://github.com/webzth"
             target="_blank"
             rel="noreferrer"
             style={{ textDecoration: "underline" }}

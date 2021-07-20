@@ -44,7 +44,7 @@ function Post({ match }) {
     if (!post) {
       getSinglePost();
     }
-  }, [dispatch, post, match]);
+  }, [dispatch, post, match.params.id]);
 
   const reset = "reset";
   const { [reset]: resetComment, ...comment } = useField("text");
