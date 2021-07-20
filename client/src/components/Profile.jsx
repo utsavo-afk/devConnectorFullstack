@@ -287,7 +287,8 @@ function Profile({ match }) {
                 <p>No github repositories found</p>
               )}
 
-              {isAuthenticated.user.id === profile.user.id ? (
+              {isAuthenticated &&
+              isAuthenticated.user.id === profile.user.id ? (
                 <Button
                   className="mt-3 btn-block btn-secondary font-weight-bold"
                   as={Link}
