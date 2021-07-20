@@ -41,7 +41,8 @@ function Post({ match }) {
         dispatch(notifyAndClear("" + error, "danger", 3));
       }
     }
-    if (!post) {
+
+    if (match.params.id) {
       getSinglePost();
     }
   }, [dispatch, post, match.params.id]);
