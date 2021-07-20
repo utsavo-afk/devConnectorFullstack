@@ -96,7 +96,7 @@ function Post({ match }) {
               <div>
                 <Card.Title>{post.text}</Card.Title>
 
-                <Link to={`/api/profiles/${post.user.id}`}>
+                <Link to={`/profiles/${post.user.id}`}>
                   <Card.Subtitle className="text-muted">
                     ~{" "}
                     <Image

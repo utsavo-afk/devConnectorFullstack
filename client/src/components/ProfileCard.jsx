@@ -37,7 +37,7 @@ function ProfileCard({ profile }) {
             <Button
               className="btn-md btn-block btn-info"
               as={Link}
-              to={`/api/profiles/${profile.user.id}`}
+              to={`/profiles/${profile.user.id}`}
             >
               View Profile
             </Button>

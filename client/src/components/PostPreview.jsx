@@ -44,10 +44,10 @@ function PostPreview({ post, auth }) {
       <Card.Body>
         <div className="d-flex justify-content-between align-items-start">
           <div>
-            <Link to={`/api/posts/${post._id}`}>
+            <Link to={`/posts/${post._id}`}>
               <Card.Title>{post.text}</Card.Title>
             </Link>
-            <Link to={`/api/profiles/${post.user.id}`}>
+            <Link to={`/profiles/${post.user.id}`}>
               <Card.Subtitle className="text-muted">
                 ~{" "}
                 <Image
@@ -89,7 +89,7 @@ function PostPreview({ post, auth }) {
                 aria-hidden="true"
               ></i>
             </Button>
-            <Link to={`/api/posts/${post._id}`}>
+            <Link to={`/posts/${post._id}`}>
               <Button className="btn-sm btn-light">
                 <i
                   className="fa fa-comment text-secondary"
