@@ -22,7 +22,7 @@ const MainRoutes = () => {
       <Route exact path="/profiles/:id" component={Profile} />
       <PrivateRoute exact path="/dashboard" component={Dashboard} />
       <PrivateRoute exact path="/posts" component={Posts} />
-      <PrivateRoute exact path="/api/posts/:id" component={Post} />
+      <PrivateRoute exact path="/posts/:id" component={Post} />
       <PrivateRoute exact path="/create-profile" component={CreateProfile} />
       <PrivateRoute exact path="/edit-profile" component={EditProfile} />
       <PrivateRoute exact path="/add-education" component={AddEducation} />

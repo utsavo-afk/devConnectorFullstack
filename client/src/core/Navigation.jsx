@@ -25,7 +25,7 @@ const Navigation = () => {
               Signed in as:{" "}
               <Link
                 className="text-success"
-                to={`/api/profiles/${authenticated.user.id}`}
+                to={`/profiles/${authenticated.user.id}`}
               >
                 {authenticated.user.name}
               </Link>
