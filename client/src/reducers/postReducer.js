@@ -11,6 +11,8 @@ import {
 
 const postReducer = (state = { allPosts: [], post: null }, action) => {
   switch (action.type) {
+    case "RESET_POST":
+      return { ...state, post: action.data };
     case "GET_POSTS":
       return { ...state, allPosts: action.data };
     case "GET_POST":
@@ -157,6 +159,15 @@ export const removeComment = (postId, commentId) => {
     } catch ({ error }) {
       throw new Error(error);
     }
+  };
+};
+
+export const resetSinglePost = () => {
+  return (dispatch) => {
+    dispatch({
+      type: "RESET_POST",
+      data: null,
+    });
   };
 };
 
